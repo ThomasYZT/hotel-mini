@@ -1,0 +1,61 @@
+.search-list {
+  height: 100%;
+
+  .at-search-bar {
+    height: 80px;
+  }
+
+  .filter-wrapper {
+    .order-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+
+      .order-btn {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 26px;
+        color: #333333;
+
+        &:active {
+          background-color: #ebedf0;
+        }
+      }
+    }
+    .tag-box {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      height: 100px;
+
+      .filter-tag {
+        padding: 10px 20px;
+        margin: 0 10px;
+        font-size: 26px;
+        white-space: nowrap;
+        color: #333333;
+        background-color: #F2F6F9;
+        border-radius: 5px;
+
+        &:active {
+          background-color: #ebedf0;
+        }
+      }
+    }
+  }
+
+
+
+
+
+  .list-wrapper {
+    height: calc(100% - 280px);
+    background-color: #FAF5FB;
+  }
+}

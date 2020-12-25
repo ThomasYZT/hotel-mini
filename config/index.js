@@ -14,6 +14,34 @@ const config = {
   },
   copy: {
     patterns: [
+      {
+        from: 'src/components/vant-weapp/wxs/',
+        to: 'dist/components/vant-weapp/wxs/'
+      },
+      {
+        from: 'src/components/vant-weapp/button/index.wxs',
+        to: 'dist/components/vant-weapp/button/index.wxs'
+      },
+      {
+        from: 'src/components/vant-weapp/icon/index.wxs',
+        to: 'dist/components/vant-weapp/icon/index.wxs'
+      },
+      {
+        from: 'src/components/vant-weapp/calendar/index.wxs',
+        to: 'dist/components/vant-weapp/calendar/index.wxs'
+      },
+      {
+        from: 'src/components/vant-weapp/calendar/utils.wxs',
+        to: 'dist/components/vant-weapp/calendar/utils.wxs'
+      },
+      {
+        from: 'src/components/vant-weapp/calendar/components/month/index.wxs',
+        to: 'dist/components/vant-weapp/calendar/components/month/index.wxs'
+      },
+      {
+        from: 'src/components/vant-weapp/popup/index.wxs',
+        to: 'dist/components/vant-weapp/popup/index.wxs'
+      }
     ],
     options: {
     }
@@ -24,7 +52,9 @@ const config = {
       pxtransform: {
         enable: true,
         config: {
-
+          selectorBlackList: [
+            /^.van-.*?$/,
+          ],
         }
       },
       url: {

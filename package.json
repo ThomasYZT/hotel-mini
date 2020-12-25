@@ -41,7 +41,9 @@
     "taro-ui-vue": "^1.0.0-beta.4",
     "vue": "^2.5.0",
     "vue-template-compiler": "^2.5.0",
-    "vuex": "^3.0.0"
+    "vuex": "^3.0.0",
+    "moment": "^2.29.1",
+    "pubsub-js": "^1.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
