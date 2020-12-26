@@ -8,6 +8,10 @@
     height: 350px;
     overflow: hidden;
 
+    image {
+      width: 100%;
+    }
+
     .view-btn {
       display: flex;
       justify-content: center;
