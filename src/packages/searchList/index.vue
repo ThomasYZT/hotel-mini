@@ -9,16 +9,36 @@
     />
     <view class="filter-wrapper">
       <view class="order-box">
-        <view class="order-btn">距离排序</view>
-        <view class="order-btn">价格排序</view>
+        <van-dropdown-menu>
+          <view class="order-btn"
+                @tap="onDiscountClick">优惠</view>
+          <view class="order-btn"
+                @tap="onRangeClick">价格筛选</view>
+          <van-dropdown-item
+            :value="value2"
+            :options="option2"
+          />
+        </van-dropdown-menu>
       </view>
       <view class="tag-box">
-        <view class="filter-tag">低价好评</view>
-        <view class="filter-tag">近距离优先</view>
-        <view class="filter-tag">低价好评</view>
-        <view class="filter-tag">近距离优先</view>
-        <view class="filter-tag">低价好评</view>
-        <view class="filter-tag">近距离优先</view>
+        <view class="filter-tag">
+          低价好评
+        </view>
+        <view class="filter-tag">
+          近距离优先
+        </view>
+        <view class="filter-tag">
+          低价好评
+        </view>
+        <view class="filter-tag">
+          近距离优先
+        </view>
+        <view class="filter-tag">
+          低价好评
+        </view>
+        <view class="filter-tag">
+          近距离优先
+        </view>
       </view>
     </view>
     <scroll-view
@@ -41,19 +61,31 @@
         {{ index }}
       </hotelCard>
     </scroll-view>
+
+    <range ref="range"></range>
   </view>
 </template>
 
 <script>
 import './index.scss'
+import range from '../../components/vueComponents/range';
 import hotelCard from '../../components/serviceComponents/hotelCard';
 export default {
   components: {
+    range,
     hotelCard
   },
   data () {
     return {
       listData: [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],
+      value1: 0,
+      value2: 'a',
+      option1: [],
+      option2: [
+        { text: '距离排序', value: 'a' },
+        { text: '价格排序', value: 'b' }
+      ],
+      rangeVal: [],
       filterParams: {
         title: ''
       },
@@ -62,6 +94,12 @@ export default {
   },
   methods: {
     onChange() {
+
+    },
+    onRangeClick(val) {
+      this.$refs.range.show([0, 9999])
+    },
+    onDiscountClick() {
 
     },
     onSearchClick () {

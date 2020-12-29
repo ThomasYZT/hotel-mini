@@ -41,6 +41,10 @@ const config = {
       {
         from: 'src/components/vant-weapp/popup/index.wxs',
         to: 'dist/components/vant-weapp/popup/index.wxs'
+      },
+      {
+        from: 'src/components/vant-weapp/dropdown-menu/index.wxs',
+        to: 'dist/components/vant-weapp/dropdown-menu/index.wxs'
       }
     ],
     options: {

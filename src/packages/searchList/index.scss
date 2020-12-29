@@ -7,13 +7,10 @@
 
   .filter-wrapper {
     .order-box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100px;
 
       .order-btn {
-        flex: 1 0 auto;
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,6 +21,10 @@
         &:active {
           background-color: #ebedf0;
         }
+      }
+
+      .range-selector {
+
       }
     }
     .tag-box {

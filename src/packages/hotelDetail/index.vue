@@ -23,7 +23,7 @@
         <view class="count">1晚</view>
         <view class="date">12-05 <text>离店</text></view>
       </view>
-      <view class="room-tag-box">
+<!--      <view class="room-tag-box">
         <view class="room-tag">大床</view>
         <view class="room-tag">双床</view>
         <view class="room-tag">到店付</view>
@@ -34,7 +34,7 @@
         <view class="room-tag">到店付</view>
         <view class="room-tag">免费取消</view>
         <view class="room-tag">含双早</view>
-      </view>
+      </view>-->
       <view class="room-list">
         <roomCard v-for="item in roomList"></roomCard>
       </view>

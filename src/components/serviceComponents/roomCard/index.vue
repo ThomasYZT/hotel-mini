@@ -24,13 +24,7 @@
           可用券
         </view>
         <view class="hotel-tag">
-          钟点房
-        </view>
-        <view class="hotel-tag">
-          新客优惠
-        </view>
-        <view class="hotel-tag">
-          立减
+          返现
         </view>
       </view>
     </view>
@@ -38,7 +32,7 @@
       <view class="price">
         ¥<text class="num">197</text><text class="tip">起</text>
       </view>
-      <view class="pay-btn">在线付</view>
+<!--      <view class="pay-btn">在线付</view>-->
     </view>
   </view>
 </template>

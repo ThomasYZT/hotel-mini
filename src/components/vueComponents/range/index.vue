@@ -11,7 +11,7 @@
         <AtRange
           v-if="visible"
           :min="0"
-          :max="9000"
+          :max="9999"
           :value="rangeVal"
           :onChange="onChange" />
       </view>
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     show(val) {
-      this.rangeVal = val;
+      this.rangeVal = val || [0, 9999];
       this.visible = true
     },
     confirm() {

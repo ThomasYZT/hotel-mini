@@ -26,11 +26,11 @@
           </view>
           <view class="grid-item">
             <image src="../../assets/img/icon/pending-icon.png" />
-            待使用
+            已支付
           </view>
           <view class="grid-item">
             <image src="../../assets/img/icon/refund-icon.png" />
-            退款
+            全部订单
           </view>
         </view>
       </view>

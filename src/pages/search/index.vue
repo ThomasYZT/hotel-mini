@@ -16,20 +16,34 @@
         </view>
       </view>
       <view class="tab-content">
-        <view v-show="tabIndex === 0"
-              class="tab-pane">
-          <dayRoomPane :filterParams="dayRoomParams" />
+        <view
+          v-show="tabIndex === 0"
+          class="tab-pane"
+        >
+          <dayRoomPane :filter-params="dayRoomParams" />
         </view>
-        <view v-show="tabIndex === 1"
-              class="tab-pane">
-          <hourRoomPane :filterParams="hourRoomParams" />
+        <view
+          v-show="tabIndex === 1"
+          class="tab-pane"
+        >
+          <hourRoomPane :filter-params="hourRoomParams" />
         </view>
       </view>
     </view>
 
-    <calendar ref="calendar" @on-change="calendarChange" />
-    <calendar ref="singleCalendar" type="single" @on-change="singleCalendarChange" />
-    <range ref="range" @on-change="rangeChange"></range>
+    <calendar
+      ref="calendar"
+      @on-change="calendarChange"
+    />
+    <calendar
+      ref="singleCalendar"
+      type="single"
+      @on-change="singleCalendarChange"
+    />
+    <range
+      ref="range"
+      @on-change="rangeChange"
+    />
   </view>
 </template>
 
@@ -46,7 +60,7 @@ export default {
     calendar,
     range
   },
-  data () {
+  data (vm) {
     return {
       tabIndex: 0,
       tabList: [
@@ -60,12 +74,12 @@ export default {
         }
       ],
       dayRoomParams: {
-        dayRange: [],
-        priceRange: [0, 9000]
+        dayRange: [vm.$date(), vm.$date().add(1, 'days')],
+        priceRange: ''
       },
       hourRoomParams: {
         dayRange: '',
-        priceRange: [0, 9000]
+        priceRange: ''
       },
     }
   },
